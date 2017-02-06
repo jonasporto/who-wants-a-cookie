@@ -1,7 +1,11 @@
 require 'sinatra'
+require 'sinatra/cross_origin'
 require 'json'
 
 require_relative 'config/redis'
+
+register Sinatra::CrossOrigin
+enable cross_origin
 
 COOKIES_KEY = 'cookie:domains'
 
