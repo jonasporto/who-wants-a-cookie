@@ -4,6 +4,8 @@ require 'json'
 
 require_relative 'config/redis'
 
+register Sinatra::CrossOrigin
+
 configure do
   enable :cross_origin
 end
