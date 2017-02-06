@@ -4,8 +4,9 @@ require 'json'
 
 require_relative 'config/redis'
 
-register Sinatra::CrossOrigin
-enable cross_origin
+configure do
+  enable :cross_origin
+end
 
 COOKIES_KEY = 'cookie:domains'
 
